@@ -1,0 +1,439 @@
+/* General Reset */
+body, ul, li, a, h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and links */
+    background-color: #000000;
+    padding: 1rem 2rem;
+    position: sticky; /* Sticky navbar */
+    top: 0;
+    z-index: 1000;
+  }
+  /* Reverse the flex order */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  /* Logo Styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: auto; /* Push the nav-links to the right */
+  }
+  
+  .logo span {
+    color: #ffc107; /* Highlight the "Me." part */
+  }
+  
+  /* Navigation Links Styling */
+  .nav-links {
+    display: flex;
+    gap: 2rem; /* Space between each link */
+    margin-left: auto; /* Align links to the right */
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+  
+  
+  
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    gap: 2rem; /* Space between the text and the image */
+    min-height: calc(100vh - 80px); /* Full viewport height minus the navbar height */
+    padding: 0 2rem; /* Add padding to avoid content touching the edges */
+    background-color: #121212;
+    text-align: center;
+    flex-wrap: wrap; /* Ensures layout is responsive */
+  }
+  
+  /* Text Section */
+  .text-section {
+    max-width: 500px; /* Limit the width of the text */
+    text-align: center; /* Center align the text */
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    font-size: 1.5rem; /* Larger font size for "Hello, Welcome" */
+    color: #bbbbbb; /* Slightly lighter color */
+    margin-bottom: 1rem;
+  }
+  
+  /* Name Highlight */
+  .text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Default color */
+  }
+  
+  .text-section .name-highlight {
+    color: #ffc107; /* Highlight color for the name */
+    font-weight: bold;
+  }
+  
+  /* Description Paragraph */
+  .text-section p {
+    font-size: 1rem;
+    color: #bbbbbb;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Contact Icons Container */
+  .contact-icons {
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    justify-content: center; /* Center the icons */
+    margin-top: 1.5rem; /* Add space above the icons */
+  }
+  
+  .contact-icons a {
+    font-size: 1.8rem; /* Icon size */
+    color: #ffc107; /* Default icon color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .contact-icons a:hover {
+    color: #e0a800; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+  }
+  
+  .contact-icons a:focus {
+    outline: none; /* Remove focus outline for better design */
+  }
+  
+  /* Image Section */
+  .image-section img {
+    max-width: 400px; /* Set a maximum width for the image */
+    width: 100%; /* Ensure the image is responsive */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* Stack the text and image on small screens */
+      text-align: center;
+    }
+  
+    .text-section {
+      max-width: 100%; /* Expand the text section */
+    }
+  
+    .image-section img {
+      max-width: 300px; /* Reduce image size on small screens */
+    }
+  
+    .contact-icons {
+      gap: 1rem; /* Reduce space between icons */
+    }
+  }
+  
+  
+  /* Smooth Scrolling */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+/* About Section Styling */
+.about {
+    display: flex;
+    flex-direction: column; /* Stack the title and text */
+    align-items: center; /* Center-align all content */
+    justify-content: center; /* Vertically center within the page */
+    min-height: 100vh; /* Full viewport height */
+    padding: 2rem; /* Add padding to avoid text touching the edges */
+    background: url("Images/Background.avif") no-repeat center center/cover; /* Add a background image */
+    text-align: center; /* Center-align text */
+    color: #ffffff; /* Ensure text is readable */
+    position: relative;
+  }
+  
+  /* Semi-transparent overlay for readability */
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    z-index: 1;
+  }
+  
+  .about .content {
+    position: relative;
+    z-index: 2; /* Bring content above the overlay */
+    max-width: 800px; /* Limit the width of the entire content */
+  }
+  
+  .about h2 {
+    font-size: 3rem; /* Larger font for the title */
+    color: #ffc107;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .about h2::after {
+    content: "";
+    display: block;
+    width: 120px; /* Width of the underline */
+    height: 4px;
+    background-color: #ffc107;
+    margin: 0.5rem auto 0; /* Center the underline */
+    border-radius: 2px;
+  }
+  
+  .about p {
+    font-size: 1.25rem; /* Increased font size */
+    line-height: 1.8; /* Improved line spacing */
+    color: #e0e0e0;
+    margin-top: 1rem;
+  }
+  
+ /* Projects Section */
+ .projects {
+    padding: 3rem 1rem; /* Add consistent padding */
+    text-align: center; /* Center-align all child elements */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items horizontally */
+    gap: 2rem; /* Add spacing between the title and cards */
+}
+
+.projects .section-title {
+    font-size: 2.5rem; /* Increase the font size for emphasis */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Add spacing below the title */
+    color: #ffc107; /* Highlight color for the title */
+    text-align: center; /* Center-align the title text */
+}
+
+/* Project Cards Container */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 1.5rem; /* Reduce the gap between cards */
+    justify-content: center; /* Center the cards */
+    width: 100%; /* Make the container take full width */
+    max-width: 1200px; /* Limit the container width */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 230px; /* Reduce card width to fit 4 in a row */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Adjust height proportionally */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 0.75rem; /* Slightly reduce padding */
+}
+
+.card-content h3 {
+    font-size: 1rem; /* Adjust font size to match smaller cards */
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-content .tech {
+    font-size: 0.9rem;
+    color: #ffc107;
+    margin-bottom: 0.75rem;
+}
+
+.card-content .description {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+
+/* Certifications Section */
+.certifications {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.certifications .section-title {
+    font-size: 2.5rem; /* Larger font for emphasis */
+    font-weight: bold;
+    margin-bottom: 2rem; /* Add spacing below the title */
+    color: #ffc107; /* Highlight color for the title */
+}
+
+/* Certification Cards Container */
+.certification-cards {
+    display: flex;
+    flex-wrap: wrap; /* Cards wrap to the next row on smaller screens */
+    gap: 2rem; /* Space between cards */
+    justify-content: center; /* Center the cards below the title */
+    width: 100%;
+    max-width: 1200px; /* Restrict the maximum width */
+    margin: auto; /* Center the container */
+}
+
+/* Individual Card Styling */
+.certification-cards .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjusted width for consistent layout */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-cards .card:hover {
+    transform: scale(1.05); /* Add hover effect for interaction */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Certification Image */
+.certification-cards .card img {
+    width: 100%; /* Ensure image takes the full width of the card */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0; /* Match card's rounded corners */
+}
+
+/* Certification Title */
+.certification-cards .card-content {
+    padding: 1rem; /* Padding inside the card */
+}
+
+.certification-cards .card-content h3 {
+    font-size: 1.2rem; /* Title font size */
+    margin: 0.5rem 0;
+    color: #333;
+}
+@media (max-width: 768px) {
+    .certification-cards .card {
+        width: 200px; /* Adjust card width for smaller screens */
+    }
+
+    .certification-cards {
+        gap: 1.5rem; /* Reduce gap between cards */
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.skills .section-title {
+    font-size: 2.5rem; /* Larger font for the title */
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffc107;
+}
+
+/* Skills Boxes Container */
+.skills-boxes {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    justify-content: center; /* Center the skill boxes */
+    align-items: center; /* Center vertically within container */
+    gap: 1.5rem; /* Space between the skill boxes */
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto;
+}
+
+/* Individual Skill Box */
+.skill-box {
+    background-color: #f0f0f0; /* Light background for the box */
+    color: #333; /* Text color */
+    font-size: 1.2rem; /* Font size for skill names */
+    font-weight: bold; /* Make the skill names stand out */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Hover Effect for Skill Box */
+.skill-box:hover {
+    transform: scale(1.1); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow depth */
+    background-color: #ffc107; /* Highlight color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+    .skill-box {
+        font-size: 1rem; /* Reduce font size */
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .skills-boxes {
+        gap: 1rem; /* Reduce gap between boxes */
+    }
+}
+
+.share-link {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .share-link a {
+    color: #ffc107;
+    text-decoration: underline;
+  }
+  
+  .share-link a:hover {
+    color: #e0a800;
+  }
+  

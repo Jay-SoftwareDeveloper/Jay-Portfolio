@@ -421,19 +421,5 @@ html {
     }
 }
 
-.share-link {
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .share-link a {
-    color: #ffc107;
-    text-decoration: underline;
-  }
-  
-  .share-link a:hover {
-    color: #e0a800;
-  }
+
   
